@@ -1,0 +1,332 @@
+CIwUIElement
+{
+	name "main"
+	position { 0 0 }
+	size { 1024 600 }
+
+	CIwUIElement
+	{
+		name "Grid_0"
+		position { 1 0 }
+		size { 374 74 }
+		offset { 0 0 }
+		wrapUp "none"
+		rotation 0.000000
+		aspectRatio { 0 0 }
+		sizeToContent true
+		slot 0
+		wrapRight "none"
+		focusHandler ""
+
+		CIwUITextField
+		{
+			name "TextField"
+			position { 74 0 }
+			size { 300 37 }
+			style "<textField>"
+			sizeToSpace true
+			OnTextFieldComplete { "UpdateName" }
+			updatable true
+			sizeMin { 300 0 }
+			caption ""
+			clipped true
+		}
+
+		CIwUITextField
+		{
+			name "TextField_0"
+			position { 74 37 }
+			size { 300 37 }
+			style "<textField>"
+			OnTextFieldComplete { "UpdateSurname" }
+			sizeToContent false
+			updatable true
+			caption ""
+			clipped true
+		}
+
+		CIwUILabel
+		{
+			name "Label"
+			position { 0 0 }
+			size { 50 37 }
+			style "<label_medium>"
+			sizeHint { 53 37 }
+			sizeMax { -1 37 }
+			sizeMin { 0 37 }
+			caption "Nome"
+		}
+
+		CIwUILabel
+		{
+			name "Label_0"
+			position { 0 37 }
+			size { 74 37 }
+			style "<label_medium>"
+			caption "Cognome"
+		}
+
+		CIwUILayoutGrid
+		{
+			name "Grid"
+			sizeToSpace false
+			numColumns 2
+			numRows 2
+
+			element
+			{
+				name "TextField"
+				row 0
+				alignH "left"
+				alignV "middle"
+				column 1
+			}
+
+			element
+			{
+				name "TextField_0"
+				row 1
+				alignH "left"
+				alignV "bottom"
+				column 1
+			}
+
+			element
+			{
+				name "Label"
+				row 0
+				alignH "left"
+				alignV "bottom"
+				column 0
+			}
+
+			element
+			{
+				name "Label_0"
+				row 1
+				alignH "left"
+				alignV "bottom"
+				column 0
+			}
+		}
+	}
+
+	CIwUIElement
+	{
+		name "Grid_1"
+		position { 0 160 }
+		size { 459 172 }
+		sizeToContent true
+
+		CIwUILabel
+		{
+			name "Label_1"
+			position { 0 0 }
+			size { 150 37 }
+			style "<label_medium>"
+			caption "Giorno di nascita (GG)"
+		}
+
+		CIwUILabel
+		{
+			name "Label_2"
+			position { 0 37 }
+			size { 143 37 }
+			style "<label_medium>"
+			caption "Mese di nascita (MM)"
+		}
+
+		CIwUILabel
+		{
+			name "Label_3"
+			position { 0 74 }
+			size { 159 37 }
+			style "<label_medium>"
+			caption "Anno di nascita (AAAA)"
+		}
+
+		CIwUITextField
+		{
+			name "Month"
+			position { 159 37 }
+			size { 300 37 }
+			style "<textField>"
+			OnTextFieldComplete { "UpdateMonth" }
+			sizeToContent false
+			updatable true
+			caption ""
+			clipped true
+		}
+
+		CIwUITextField
+		{
+			name "Year"
+			position { 159 74 }
+			size { 300 37 }
+			style "<textField>"
+			OnTextFieldComplete { "UpdateYear" }
+			sizeToContent false
+			updatable true
+			caption ""
+			clipped true
+		}
+
+		CIwUITextField
+		{
+			name "Day"
+			position { 159 0 }
+			size { 300 37 }
+			style "<textField>"
+			OnTextFieldComplete { "UpdateDay" }
+			updatable true
+			sizeMin { 300 0 }
+			caption ""
+			clipped true
+		}
+
+		CIwUITextField
+		{
+			name "TextField_4"
+			position { 159 135 }
+			size { 300 37 }
+			style "<textField>"
+			OnTextFieldComplete { "UpdatePlace" }
+			sizeToContent false
+			keyboardLayout "default"
+			updatable true
+			caption ""
+			clipped true
+		}
+
+		CIwUILabel
+		{
+			name "Foreign"
+			position { 0 135 }
+			size { 66 37 }
+			style "<label_medium>"
+			caption "Comune"
+		}
+
+		CIwUICheckbox
+		{
+			name "CheckBox"
+			position { 0 111 }
+			size { 140 24 }
+			style "<checkbox>"
+			OnCheckboxChecked { "UpdateIsForeign" }
+			textColour { 0 0 0 255 }
+			caption "Nato all'estero?"
+		}
+
+		CIwUILayoutGrid
+		{
+			name "Grid"
+			numColumns 2
+			numRows 5
+
+			element
+			{
+				name "Label_1"
+				row 0
+				alignH "left"
+				alignV "middle"
+				column 0
+			}
+
+			element
+			{
+				name "Label_2"
+				row 1
+				alignH "left"
+				alignV "middle"
+				column 0
+			}
+
+			element
+			{
+				name "Label_3"
+				row 2
+				alignH "left"
+				alignV "middle"
+				column 0
+			}
+
+			element
+			{
+				name "Month"
+				row 1
+				alignH "left"
+				alignV "bottom"
+				column 1
+			}
+
+			element
+			{
+				name "Year"
+				row 2
+				alignH "left"
+				alignV "middle"
+				column 1
+			}
+
+			element
+			{
+				name "Day"
+				row 0
+				alignH "centre"
+				alignV "bottom"
+				column 1
+			}
+
+			element
+			{
+				name "TextField_4"
+				row 4
+				alignH "left"
+				alignV "bottom"
+				column 1
+			}
+
+			element
+			{
+				name "Foreign"
+				row 4
+				alignH "left"
+				alignV "middle"
+				column 0
+			}
+
+			element
+			{
+				name "CheckBox"
+				row 3
+				alignV "bottom"
+				column 0
+			}
+		}
+	}
+
+	CIwUIButton
+	{
+		name "Button"
+		position { 215 351 }
+		size { 89 37 }
+		style "<button>"
+		OnButtonClick { "FireCode" }
+		caption "Calcola!"
+	}
+
+	CIwUITabBar
+	{
+		name "TabBar"
+		position { 143 96 }
+		size { 128 32 }
+		sizeToContent true
+		radioButtonStyles { { style "<radio_left>" OnButtonClick { "isMale" } caption "Maschio" } { style "<radio_right>" OnButtonClick { "isFemale" } caption "Femmina" } }
+
+		CIwUIFocusHandlerTab
+		{
+			name ""
+		}
+	}
+}

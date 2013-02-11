@@ -1,0 +1,36 @@
+#!/usr/bin/env mkb
+
+# files specifies all files to build
+files
+{
+    (src)
+    main.cpp
+
+	[data]
+	(data)
+	UI.group
+# Add new source files here
+}
+
+subprojects
+{
+	python
+    IwUI
+}
+
+assets
+{
+	(data-ram)
+	mockup.py
+	esteri.py
+	comuni.py
+    (data-ram/data-gles1, data)
+    ui.group.bin
+	iwui_style/iwui_resources.group
+	iwui_style/style.group.bin
+}
+
+package
+{
+	python
+}

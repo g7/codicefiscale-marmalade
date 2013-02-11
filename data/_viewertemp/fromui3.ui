@@ -1,0 +1,317 @@
+CIwUIElement
+{
+	name "main"
+	pos  { 0 0 }
+	size  { 1024 600 }
+	CIwUITabBar 
+	{
+		name "TabBar"
+		pos  { 59 111 }
+		size  { 128 32 }
+		sizeToContent true
+		radioButtonStyles {
+			
+			{
+				name ""
+				parent <radio_left>
+//: 			extraclass "CIwUIButton"
+				caption "Maschio"
+				OnButtonClick  { "isMale" }
+			}
+			 
+			{
+				name ""
+				parent <radio_right>
+//: 			extraclass "CIwUIButton"
+				caption "Femmina"
+				OnButtonClick  { "isFemale" }
+			}
+		}
+		CIwUIFocusHandlerTab 
+		{
+			name ""
+		}
+	}
+	CIwUIButton 
+	{
+		name "Button"
+		pos  { 114 364 }
+		size  { 89 37 }
+		style <button>
+		caption "Calcola!"
+		OnButtonClick  { "FireCode" }
+	}
+	CIwUIElement 
+	{
+		name "Grid_0"
+		pos  { 1 0 }
+		size  { 374 74 }
+		offset  { 0 0 }
+		rotation 0
+		focusHandler  ""
+		slot 0
+		aspectRatio  { 0 0 }
+		wrapRight "none"
+		wrapUp "none"
+		sizeToContent true
+		CIwUITextField 
+		{
+			name "TextField"
+			pos  { 74 0 }
+			size  { 300 37 }
+			style <textField>
+			sizeMin  { 300 0 }
+			updatable true
+			clipped true
+			caption ""
+			sizeToSpace true
+			OnTextFieldComplete  { "UpdateName" }
+		}
+		CIwUITextField 
+		{
+			name "TextField_0"
+			pos  { 74 37 }
+			size  { 300 37 }
+			style <textField>
+			updatable true
+			clipped true
+			sizeToContent false
+			caption ""
+			OnTextFieldComplete  { "UpdateSurname" }
+		}
+		CIwUILabel 
+		{
+			name "Label"
+			pos  { 0 0 }
+			size  { 50 37 }
+			style <label_medium>
+			sizeMin  { 0 37 }
+			sizeMax  { -1 37 }
+			sizeHint  { 53 37 }
+			caption "Nome"
+		}
+		CIwUILabel 
+		{
+			name "Label_0"
+			pos  { 0 37 }
+			size  { 74 37 }
+			style <label_medium>
+			caption "Cognome"
+		}
+		CIwUILayoutGrid 
+		{
+			name "Grid"
+			style  ""
+			sizeToSpace false
+			numColumns 2
+			numRows 2
+			element 
+			{
+				name "TextField"
+				alignH "left"
+				alignV "middle"
+				row 0
+				column 1
+			}
+			element 
+			{
+				name "TextField_0"
+				alignH "left"
+				alignV "bottom"
+				row 1
+				column 1
+			}
+			element 
+			{
+				name "Label"
+				alignH "left"
+				alignV "bottom"
+				row 0
+				column 0
+			}
+			element 
+			{
+				name "Label_0"
+				alignH "left"
+				alignV "bottom"
+				row 1
+				column 0
+			}
+		}
+	}
+	CIwUIElement 
+	{
+		name "Grid_1"
+		pos  { 0 160 }
+		size  { 459 172 }
+		sizeToContent true
+		CIwUILabel 
+		{
+			name "Label_1"
+			pos  { 0 0 }
+			size  { 150 37 }
+			style <label_medium>
+			caption "Giorno di nascita (GG)"
+		}
+		CIwUILabel 
+		{
+			name "Label_2"
+			pos  { 0 37 }
+			size  { 143 37 }
+			style <label_medium>
+			caption "Mese di nascita (MM)"
+		}
+		CIwUILabel 
+		{
+			name "Label_3"
+			pos  { 0 74 }
+			size  { 159 37 }
+			style <label_medium>
+			caption "Anno di nascita (AAAA)"
+		}
+		CIwUITextField 
+		{
+			name "Month"
+			pos  { 159 37 }
+			size  { 300 37 }
+			style <textField>
+			updatable true
+			clipped true
+			sizeToContent false
+			caption ""
+			OnTextFieldComplete  { "UpdateMonth" }
+		}
+		CIwUITextField 
+		{
+			name "Year"
+			pos  { 159 74 }
+			size  { 300 37 }
+			style <textField>
+			updatable true
+			clipped true
+			sizeToContent false
+			caption ""
+			OnTextFieldComplete  { "UpdateYear" }
+		}
+		CIwUITextField 
+		{
+			name "Day"
+			pos  { 159 0 }
+			size  { 300 37 }
+			style <textField>
+			sizeMin  { 300 0 }
+			updatable true
+			clipped true
+			caption ""
+			OnTextFieldComplete  { "UpdateDay" }
+		}
+		CIwUITextField 
+		{
+			name "TextField_4"
+			pos  { 159 135 }
+			size  { 300 37 }
+			style <textField>
+			updatable true
+			clipped true
+			sizeToContent false
+			caption ""
+			keyboardLayout "default"
+			OnTextFieldComplete  { "UpdatePlace" }
+		}
+		CIwUILabel 
+		{
+			name "Foreign"
+			pos  { 0 135 }
+			size  { 66 37 }
+			style <label_medium>
+			caption "Comune"
+		}
+		CIwUICheckbox 
+		{
+			name "CheckBox"
+			pos  { 0 111 }
+			size  { 140 24 }
+			style <checkbox>
+			caption "Nato all'estero?"
+			textColour { 0 0 0 255 }
+			OnCheckboxChecked  { "UpdateIsForeign" }
+		}
+		CIwUILayoutGrid 
+		{
+			name "Grid"
+			numColumns 2
+			numRows 5
+			element 
+			{
+				name "Label_1"
+				alignH "left"
+				alignV "middle"
+				row 0
+				column 0
+			}
+			element 
+			{
+				name "Label_2"
+				alignH "left"
+				alignV "middle"
+				row 1
+				column 0
+			}
+			element 
+			{
+				name "Label_3"
+				alignH "left"
+				alignV "middle"
+				row 2
+				column 0
+			}
+			element 
+			{
+				name "Month"
+				alignH "left"
+				alignV "bottom"
+				row 1
+				column 1
+			}
+			element 
+			{
+				name "Year"
+				alignH "left"
+				alignV "middle"
+				row 2
+				column 1
+			}
+			element 
+			{
+				name "Day"
+				alignH "centre"
+				alignV "bottom"
+				row 0
+				column 1
+			}
+			element 
+			{
+				name "TextField_4"
+				alignH "left"
+				alignV "bottom"
+				row 4
+				column 1
+			}
+			element 
+			{
+				name "Foreign"
+				alignH "left"
+				alignV "middle"
+				row 4
+				column 0
+			}
+			element 
+			{
+				name "CheckBox"
+				alignV "bottom"
+				row 3
+				column 0
+			}
+		}
+	}
+}
